@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	    <link rel="stylesheet" href="js/首页.css" />
+	</head>
+	<body>
+		<header>
+		    <img src="img/header.png" alt="" />
+		</header>
+		
+		<div id="wrapper" class="wrap">
+		    <div class="aDiv">
+		        
+		    </div>
+		    <div  id="login">
+		        <div class="top">
+		            <a href="" class="active">二维码登录</a>
+		            <a href="" class="">邮箱账号登录</a>
+		        </div>
+		        
+		        <div class="barcode">
+		          <ul>
+		              <li class="l1">手机扫码 安全防盗</li>
+		              <li class="l2"><img src="img/getUrlQrcode.jpeg" alt="" /></li>
+		              <li class="l3">使用 邮箱大师 扫描二维码登录</li>
+		              <li class="l4">如何使用 <span>|</span> 下载邮箱大师</li>
+		          </ul>
+		        </div>
+		        
+		        <div class="emailLogin">
+		            <iframe src="http://passport.126.com/webzj/m126_1.0.1/pub/index_dl.html" width="" height="" style="width: 100%; height: 100%; border: none; background: none;" scrolling="no"; name frameborder="0"; id="x-URS-iframe"></iframe>
+                    <div class="loginForm">
+                        <span>版本:</span>
+                        <a href="###">默认版本</a>
+                        <div></div>
+                    </div>
+                </div>
+		        
+		    </div>
+		</div>
+		
+		<footer>
+		    <img src="img/footer.png" alt="" />
+		</footer>
+		
+		
+		<script>
+		    var loginDiv = document.getElementById("login");
+		    var topDiv = document.getElementsByClassName("top")[0];
+		    var oALeft = topDiv.getElementsByTagName("a")[0];
+		    var oARight = topDiv.getElementsByTagName("a")[1];
+		    var oBarcode = document.getElementsByClassName("barcode")[0];
+		    var oEmailLogin = document.getElementsByClassName("emailLogin")[0];
+		    
+		    
+		    oALeft.onmouseover = function() {
+		        loginDiv.className = "login";
+		        
+		        oBarcode.style.display = "block";
+		        oEmailLogin.style.display = "none";
+		    };
+		    
+		    oARight.onmouseover = function() {
+		        loginDiv.className = "";
+		        oBarcode.style.display = "none";
+                oEmailLogin.style.display = "block";
+
+		    };
+		    
+		    
+		    
+		</script>
+		
+		
+	</body>
+</html>
